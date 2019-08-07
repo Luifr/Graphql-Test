@@ -14,7 +14,7 @@ type ListItem {
 	id: ID
 	title: String
 	body: String!
-	creationTime: String!
+	creationDate: String!
 }
 
 input ListItemInput {
