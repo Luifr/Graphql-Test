@@ -1,0 +1,23 @@
+
+
+type Query {
+	ListItems(newerThan: String olderThan: String titleContains: String): [ListItem]
+	ListItem(id: ID!): ListItem
+}
+
+type Mutation {
+	CreateListItem(item: ListItemInput): ListItem
+	DeleteListItem(id: ID): Boolean
+}
+
+type ListItem {
+	id: ID
+	title: String
+	body: String!
+	creationTime: String!
+}
+
+input ListItemInput {
+	title: String
+	body: String!
+}
